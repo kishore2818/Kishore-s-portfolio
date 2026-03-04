@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cyber-bg: #0a0a0a;
+  --cyber-bg-secondary: #1a1a1a;
+  --cyber-surface: #262626;
+  --cyber-cyan: #00ffff;
+  --cyber-violet: #8b5cf6;
+  --cyber-pink: #ff00ff;
+  --cyber-green: #00ff41;
+  --cyber-orange: #ff8c00;
+  --cyber-text: #ffffff;
+  --cyber-text-muted: #a1a1aa;
+  --glow-cyan: 0 0 20px rgba(0, 255, 255, 0.5);
+  --glow-violet: 0 0 20px rgba(139, 92, 246, 0.5);
+  --glow-pink: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cyber-bg);
+  color: var(--cyber-text);
+  overflow-x: hidden;
+}
+
+.font-cyber {
+  font-family: 'Orbitron', monospace;
+}
+
+.glow-cyan {
+  box-shadow: var(--glow-cyan);
+}
+
+.glow-violet {
+  box-shadow: var(--glow-violet);
+}
+
+.glow-pink {
+  box-shadow: var(--glow-pink);
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s infinite;
+  color: var(--cyber-cyan);
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.neon-border {
+  border: 1px solid var(--cyber-cyan);
+  box-shadow: 
+    0 0 5px var(--cyber-cyan),
+    inset 0 0 5px rgba(0, 255, 255, 0.1);
+}
+
+.neon-border-violet {
+  border: 1px solid var(--cyber-violet);
+  box-shadow: 
+    0 0 5px var(--cyber-violet),
+    inset 0 0 5px rgba(139, 92, 246, 0.1);
+}
+
+.backdrop-cyber {
+  backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba(10, 10, 10, 0.8);
+}
+
+.text-gradient-cyber {
+  background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.button-cyber {
+  background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-violet));
+  border: none;
+  color: var(--cyber-bg);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button-cyber:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.card-cyber {
+  background: rgba(38, 38, 38, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.card-cyber:hover {
+  border-color: var(--cyber-cyan);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  transform: translateY(-5px);
+}
