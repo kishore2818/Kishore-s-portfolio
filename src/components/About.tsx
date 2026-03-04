@@ -10,8 +10,8 @@ const About: React.FC = () => {
   });
 
   const skills = [
-    { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Framer Motion'] },
-    { category: 'Backend', items: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'GraphQL'] },
+    { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS','HTML'] },
+    { category: 'Backend', items: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB','Spring Boot'] },
     { category: 'AI/ML', items: ['TensorFlow', 'PyTorch', 'OpenAI API', 'LangChain', 'Computer Vision'] },
     { category: 'Tools', items: ['Git', 'Docker', 'Maven', 'Figma', 'Supabase'] },
   ];
