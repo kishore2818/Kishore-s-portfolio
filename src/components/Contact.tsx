@@ -2,14 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, Linkedin, Github, ExternalLink, Send, CheckCircle, MapPin, Phone } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 
-// ─── EmailJS credentials ───────────────────────────────────────────────────
-// Sign up free at https://www.emailjs.com and replace these three values:
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';   // e.g. 'service_abc123'
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xyz789'
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';   // e.g. 'aBcDeFgHiJkLmNoP'
-// ──────────────────────────────────────────────────────────────────────────
+// WhatsApp recipient number (country code + number, no +/spaces)
+const WHATSAPP_NUMBER = '919597277150';
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
@@ -71,28 +66,20 @@ const Contact: React.FC = () => {
     },
   ];
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setErrorMsg('');
 
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to_email: 'kishoreabinash2005@gmail.com',
-        },
-        EMAILJS_PUBLIC_KEY
-      );
+      const text = `Hi, I'm ${formData.name} (${formData.email})\n*Subject:* ${formData.subject}\n\n${formData.message}`;
+      const encodedText = encodeURIComponent(text);
+      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
+      window.open(whatsappUrl, '_blank');
       setIsSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (err) {
-      setErrorMsg('❌ Failed to send message. Please try again or email me directly.');
+      setErrorMsg('❌ Failed to open WhatsApp. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -235,10 +222,10 @@ const Contact: React.FC = () => {
                 >
                   <CheckCircle className="w-16 h-16 text-cyber-green mx-auto mb-4" />
                   <h4 className="text-xl font-cyber font-bold text-cyber-green mb-2">
-                    Message Sent!
+                    Redirected to WhatsApp!
                   </h4>
                   <p className="text-cyber-text-muted">
-                    Thank you for reaching out. I'll get back to you within 24 hours.
+                    Your message was pre-filled in WhatsApp. Just hit send to reach me instantly!
                   </p>
                   <motion.button
                     onClick={() => setIsSubmitted(false)}
@@ -327,7 +314,7 @@ const Contact: React.FC = () => {
                     ) : (
                       <Send size={20} />
                     )}
-                    {isLoading ? 'Sending...' : 'Send Message'}
+                    {isLoading ? 'Opening WhatsApp...' : 'Send via WhatsApp'}
                   </motion.button>
 
                   {/* Error message */}
