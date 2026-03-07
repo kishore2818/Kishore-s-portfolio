@@ -10,20 +10,7 @@ const Experience: React.FC = () => {
   });
 
   const experiences = [
-    // {
-    //   type: 'work',
-    //   title: 'Senior Full-Stack Developer',
-    //   company: 'TechCorp Solutions',
-    //   location: 'San Francisco, CA',
-    //   period: '2022 - Present',
-    //   description: 'Leading development of AI-powered web applications and mentoring junior developers. Built scalable microservices architecture serving 100K+ daily active users.',
-    //   achievements: [
-    //     'Reduced application load time by 60% through optimization',
-    //     'Led team of 5 developers on multiple high-impact projects',
-    //     'Implemented CI/CD pipeline reducing deployment time by 80%'
-    //   ],
-    //   icon: <Briefcase className="w-5 h-5" />,
-    // },
+    
     {
       type: 'work',
       title: 'MERN-Stack Developer',
@@ -74,7 +61,7 @@ const Experience: React.FC = () => {
       period: '2024 – Present',
       description: 'Recognised at national-level competitions and research forums for innovation in AI, surveillance technology, and cultural tech solutions.',
       achievements: [
-        '🏆 SIH 2024 Grand Finalist – Smart India Hackathon national-level grand finale participant',
+        '🏆 SIH 2025 Grand Finalist – Smart India Hackathon national-level grand finale participant',
         '📄 IEEE Paper Publisher – Published research on AI-driven surveillance and behavior analysis',
         '📑 Patent Published – "Edge-Based Unified AI Agent for Autonomous Surveillance Behavior Analysis and Risk-Driven Response"',
         '🥇 Kaaval Hackathon Title Winner – First place in the Kaaval national-level hackathon'
