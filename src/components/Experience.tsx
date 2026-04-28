@@ -10,7 +10,7 @@ const Experience: React.FC = () => {
   });
 
   const experiences = [
-    
+
     {
       type: 'work',
       title: 'MERN-Stack Developer',
@@ -61,7 +61,7 @@ const Experience: React.FC = () => {
       period: '2024 – Present',
       description: 'Recognised at national-level competitions and research forums for innovation in AI, surveillance technology, and cultural tech solutions.',
       achievements: [
-        '🏆 SIH 2025 Grand Finalist – Smart India Hackathon national-level grand finale participant',
+        '🏆 PAALS 2026 Finalist & SIH 2025 Grand Finalist – National-level hackathon finalist and grand finale participant',
         '📄 IEEE Paper Publisher – Published research on AI-driven surveillance and behavior analysis',
         '📑 Patent Published – "Edge-Based Unified AI Agent for Autonomous Surveillance Behavior Analysis and Risk-Driven Response"',
         '🥇 Kaaval Hackathon Title Winner – First place in the Kaaval national-level hackathon'
