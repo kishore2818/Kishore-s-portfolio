@@ -13,7 +13,7 @@ const About: React.FC = () => {
     { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS','HTML'] },
     { category: 'Backend', items: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB','Spring Boot'] },
     { category: 'AI/ML', items: ['TensorFlow', 'PyTorch', 'OpenAI API', 'LangChain', 'Computer Vision'] },
-    { category: 'Tools', items: ['Git', 'Docker', 'Maven', 'Figma', 'Supabase'] },
+    { category: 'Tools', items: ['Git', 'Docker', 'Maven', 'Figma', 'Cloud Platforms'] },
   ];
 
   const passions = [
