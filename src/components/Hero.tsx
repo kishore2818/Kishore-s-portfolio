@@ -115,7 +115,7 @@ const Hero: React.FC = () => {
               </motion.button>
 
               <motion.a
-                href="/projects/KISHORE ABINASH A-RESUME.pdf"
+                href="/projects/Kishore Abinash A.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-8 py-3 rounded-lg font-semibold text-lg border border-cyber-cyan text-cyber-cyan hover:bg-cyber-cyan hover:text-cyber-bg transition-all duration-300"

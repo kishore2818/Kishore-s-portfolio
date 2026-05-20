@@ -82,16 +82,29 @@ const Projects: React.FC = () => {
     },
     {
       id: 7,
-      title: 'Loading... Upcoming',
-      description: 'A new project is currently in the works — exploring cutting-edge technologies and solving real-world problems. Stay tuned for the reveal!',
-      image: '/projects/upcoming.png',
-      tech: ['Coming Soon'],
+      title: 'Early Wild Forest Fire Detection System [In Development]',
+      description: 'A cutting-edge early forest fire detection and alert system currently in active development. Integrates multi-sensor environmental edge nodes (temperature, humidity, smoke) paired with AI computer vision models scanning live drone and CCTV feeds. Automatically flags early-stage smoke and thermal anomalies to dispatch GPS alerts and prevent wildfire spread.',
+      image: '/projects/forestfire.png',
+      tech: ['IoT Sensors', 'AI / CV', 'React.js', 'Node.js', 'FastAPI', 'Firebase'],
       demoUrl: '#',
       githubUrl: '#',
-      demoAlert: '⚠️ This project is still in development. Stay tuned!',
-      githubAlert: '⚠️ This project is still in development. Stay tuned!',
-      icon: <Zap className="w-6 h-6" />,
+      demoAlert: '⚠️ Hardware prototype and real-time dashboard are currently in the active development and field-testing stage.',
+      githubAlert: '⚠️ Active development repository is currently private.',
+      icon: <Brain className="w-6 h-6" />,
       featured: false,
+    },
+    {
+      id: 8,
+      title: 'Production-Ready Client & Freelance Web Applications',
+      description: 'Designed and deployed a suite of highly-optimized web applications tailored for real-world client operations. Includes Adler Contracts (an elegant, fast corporate company portfolio site to boost brand authority and scale lead acquisition) and Evan\'s Luxe Beauty (a premium full-stack B2B/B2C e-commerce platform featuring integrated shopping carts and automated inventory tracking for luxury beauty products), alongside a custom pre-booking checkout platform for a local boutique meat shop.',
+      image: '/projects/clientapps.png',
+      tech: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
+      demoUrl: '#',
+      githubUrl: '#',
+      demoAlert: '✨ Production-ready systems fully compiled and ready for client server deployment.',
+      githubAlert: '⚠️ Client proprietary source code repository.',
+      icon: <Globe className="w-6 h-6" />,
+      featured: true,
     },
   ];
 
@@ -158,7 +171,9 @@ const Projects: React.FC = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className={`w-full ${
+                      project.featured ? 'h-64 sm:h-72 lg:h-96' : 'h-48 sm:h-56'
+                    } object-cover transition-transform duration-500 group-hover:scale-110`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-cyber-bg via-transparent to-transparent opacity-60" />
 

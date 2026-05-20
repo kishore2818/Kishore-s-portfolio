@@ -233,8 +233,8 @@ const Experience: React.FC = () => {
             className="text-center pt-8"
           >
             <motion.a
-              href="/projects/KISHORE ABINASH A-RESUME.pdf"
-              download="KISHORE ABINASH A-RESUME.pdf"
+              href="/projects/Kishore Abinash A.pdf"
+              download="Kishore Abinash A.pdf"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyber-cyan to-cyber-violet text-cyber-bg rounded-lg font-cyber font-bold text-lg shadow-lg"
               whileHover={{
                 scale: 1.05,
